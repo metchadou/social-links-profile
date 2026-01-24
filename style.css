@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+:root {
+    /*Font colors */
+    --color-text-primary: hsl(0, 0%, 100%);
+    --color-text-accent: hsl(75, 94%, 57%);
+    /* --color-text-muted: ; */
+
+    /*Font sizes*/
+    --font-size-lg: 22px;
+    --font-size-base: 14px;
+    --font-size-sm: 10px;
+
+    /*Font weight*/
+    /* --font-weight-strong: ; */
+    --font-weight-regular: 600;
+    --font-weight-light: 300;
+}
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-accent {
+    color: var(--color-text-accent);
+}
+
+/* .text-muted {
+    color: var(--color-text-muted);
+} */
+
+.text-lg {
+    font-size: var(--font-size-lg);
+}
+
+.text-base {
+    font-size: var(--font-size-base);
+}
+
+.text-sm {
+    font-size: var(--font-size-sm);
+}
+
+.text-regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.text-light {
+    font-weight: var(--font-weight-light);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* .text-right {
+    text-align: right;
+} */
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    /* height: 100vh; */
+    background-color: hsl(0, 0%, 8%);
+    font-family: 'Inter', sans-serif;
+    gap: 20px;
+}
+
+.profile-card-container {
+    flex: auto;
+    margin-top: 20px;
+}
+
+.profile-card {
+    width: 310px;
+    background-color: hsl(0, 0%, 12%);
+    border-radius: 15px;
+    /* border: 1px solid orange; */
+    padding: 25px;
+    gap: 15px;
+}
+
+.avatar-container img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.profile-bio {
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.social-links {
+    gap: 12px;
+}
+
+.social-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 8px;
+}
+
+.social-links a:hover {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 20%);
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+    height: 20px;
+}
+
+.attribution a {
+    color: hsl(75, 94%, 57%);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
