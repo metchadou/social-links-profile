@@ -1,3 +1,5 @@
+/* FONTS */
+
 @font-face {
     font-family: 'Inter';
     src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
@@ -5,6 +7,9 @@
     font-style: normal;
 }
 
+
+
+/* VARIABLES */
 
 :root {
     /*Font colors */
@@ -22,6 +27,60 @@
     --font-weight-regular: 600;
     --font-weight-light: 300;
 }
+
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* GLOBAL STYLES */
+
+body {
+    background-color: hsl(0, 0%, 8%);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+footer a {
+    /*Color alone should not be used to indicate things like interactive text, there must be another visual change (https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)*/
+    text-decoration: underline;
+}
+
+
+
+/* LAYOUT */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+footer {
+    height: 1.5rem;
+}
+
+
+
+/* UTILITIES */
 
 .text-primary {
     color: var(--color-text-primary);
@@ -55,98 +114,75 @@
     font-weight: var(--font-weight-light);
 }
 
-.text-center {
-    text-align: center;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* .text-right {
-    text-align: right;
-} */
 
-.flex {
-    display: flex;
-}
 
-.flex-col {
-    flex-direction: column;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.align-center {
-    align-items: center;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-body {
-    /* height: 100vh; */
-    background-color: hsl(0, 0%, 8%);
-    font-family: 'Inter', sans-serif;
-    gap: 20px;
-}
-
-.profile-card-container {
-    flex: auto;
-    margin-top: 20px;
-}
+/* COMPONENTS */
 
 .profile-card {
-    width: 310px;
     background-color: hsl(0, 0%, 12%);
     border-radius: 15px;
-    /* border: 1px solid orange; */
-    padding: 25px;
-    gap: 15px;
+    padding: 1.5rem;
+    max-width: 20rem;
+    width: 100%;
 }
 
-.avatar-container img {
-    width: 80px;
+/*Select any direct children nexcept the first one.
+How to read it
+Part	        Meaning
+.profile-bio	The parent container
+>	            Only direct children
+*	            Any element
++	            Immediately after
+*	            Any element
+
+Pattern: A + B
+Select B if it comes immediately after A.
+*/
+.profile-card > * + * {
+    margin-top: 1rem;
+}
+
+.profile-card img {
+    max-width: 5rem;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
 }
 
-.profile-bio {
-    gap: 8px;
-    margin: 10px 0;
+.profile-card-bio p {
+    margin-top: 0.5rem;
 }
 
-.social-links {
-    gap: 12px;
+.profile-card-bio blockquote {
+    margin-top: 1rem;
 }
 
-.social-links a {
+.profile-card-links li {
+    margin-bottom: 0.75rem;
+}
+
+.profile-card-links a {
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 0.63rem 0;
     background-color: hsl(0, 0%, 20%);
     border-radius: 8px;
+    text-decoration: none;
 }
 
-.social-links a:hover {
+.profile-card-links a:hover {
     background-color: hsl(75, 94%, 57%);
     color: hsl(0, 0%, 20%);
-}
-
-.attribution {
-    font-size: 11px; text-align: center;
-    height: 20px;
-}
-
-.attribution a {
-    color: hsl(75, 94%, 57%);
-}
-
-.attribution a:hover {
-    text-decoration: underline;
 }

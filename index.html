@@ -9,38 +9,56 @@
   
   <title>Frontend Mentor | Social links profile</title>
 </head>
-<body class="flex flex-col text-center text-primary text-base text-regular">
-  <div class="profile-card-container flex justify-center align-center">
-    <div class="profile-card flex flex-col">
-      <div class="avatar-container"><img src="./assets/images/avatar-jessica.jpeg" alt=""></div>
-      <div class="profile-bio flex flex-col">
+<body class="text-center text-primary text-base text-regular">
+  <!-- classes .flex .justify-center .align-center center the .profile card vertically and horizontally-->
+  <main class="profile-card-container">
+    <div class="profile-card">
+      <div class="avatar-container"><img src="./assets/images/avatar-jessica.jpeg" alt="Portrait of Franklin"></div>
+      <div class="profile-card-bio">
         <h1 class="text-lg">Franklin Metch</h1>
         <p class="text-accent">Abidjan, Ivory Coast</p>
-      </div>
-        <p class="profile-description text-light">"Software developement enthusiast."</p>
-      <ul class="social-links flex flex-col">
+        <blockquote class="text-light">"Software developement enthusiast."</blockquote>
+      </div>  
+      <ul class="profile-card-links">
         <li>
-          <a href="https://github.com/metchadou" target="_blank" class="text-primary">GitHub</a>
+          <a href="https://github.com/metchadou" target="_blank" class="text-primary">
+            GitHub
+            <span class="sr-only">(Opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="https://www.frontendmentor.io/profile/metchadou" target="_blank" class="text-primary">Frontend Mentor</a>
+          <a href="https://www.frontendmentor.io/profile/metchadou" target="_blank" class="text-primary">
+            Frontend Mentor
+            <span class="sr-only">(Opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/adoufranklin" target="_blank" class="text-primary">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/adoufranklin" target="_blank" class="text-primary">
+            LinkedIn
+            <span class="sr-only">(Opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="text-primary">Twitter</a>
+          <a href="#" class="text-primary">Twitter</a>
         </li>
         <li>
-          <a href="#" target="_blank" class="text-primary">Instagram</a>
+          <a href="#" class="text-primary">Instagram</a>
         </li>
       </ul>
     </div>
-  </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/metchadou">Franklin Metch</a>.
-  </div>
+  <footer class="text-sm">
+    Challenge by 
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-accent">
+      Frontend Mentor
+      <span class="sr-only">(Opens in a new tab)</span>
+    </a>.
+      Coded by 
+    <a href="https://www.frontendmentor.io/profile/metchadou" target="_blank" class="text-accent">
+      Franklin Metch
+      <span class="sr-only">(Opens in a new tab)</span>
+    </a>.
+  </footer>
 </body>
 </html>
